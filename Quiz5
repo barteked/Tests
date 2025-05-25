@@ -1,0 +1,17 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class NumberCheckerTest {
+
+    @Test
+    public void shouldThrowExceptionWhenNumberIs() {
+        // given
+        NumberChecker numberChecker = new NumberChecker();
+        int number = 5;
+
+        // when then
+        Assertions.assertThrows(IllegalStateException.class, () -> 
+            numberChecker.checkNumber(number)
+        );
+    }
+}
